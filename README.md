@@ -1,0 +1,1 @@
+serverless create --template-url https://github.com/exocom/serverless-template-ruby/tree/master/aws --path myService

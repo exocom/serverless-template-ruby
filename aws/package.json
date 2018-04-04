@@ -1,0 +1,13 @@
+{
+  "name": "change-name",
+  "private": true,
+  "version": "1.0.0",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@kalarrs/serverless-local-dev-server": "^1.0.0-beta.8",
+    "@kalarrs/serverless-shared-api-gateway": "^1.0.7"
+  }
+}

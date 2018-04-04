@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bson (4.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bson
+
+BUNDLED WITH
+   1.16.1

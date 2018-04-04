@@ -1,0 +1,12 @@
+provider:
+  environment:
+    CHANGE_VALUE: "change-dev"
+
+custom:
+  customDomain:
+    domainName: "dev.change.com"
+    certificateName: "*.change.com"
+    enabled: true
+    basePathMappings:
+      - path: /
+        stage: dev
