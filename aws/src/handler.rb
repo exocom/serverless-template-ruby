@@ -29,7 +29,7 @@ end
 
 post_changes = lambda do |event|
   begin
-    event = JSON.parse('{"body":{"id":"5a1b5ae36758c40453e5b024", "description": "new item"}}')
+    event = JSON.parse(event)
 
     begin
       unless event.key?('body')
@@ -103,7 +103,7 @@ end
 
 get_change = lambda do |event|
   begin
-    event = JSON.parse('{"pathParameters":{"changeId":"5a1b5b176758c40453e5e026"}}')
+    event = JSON.parse(event)
     unless event.key?('pathParameters') || event['pathParameters'].key('changeId')
       raise "missing changeId"
     end
@@ -147,7 +147,7 @@ end
 
 delete_change = lambda do |event|
   begin
-    event = JSON.parse('{"pathParameters":{"changeId":"5a1b5ae36758c40453e5e024"}}')
+    event = JSON.parse(event)
     unless event.key?('pathParameters') || event['pathParameters'].key('changeId')
       raise "missing changeId"
     end

@@ -5,7 +5,7 @@ const invoke = (methodName) => {
 
     const child  = process.env.IS_LOCAL
         ? spawn('ruby', ['./src/handler.rb', methodName, JSON.stringify(event)])
-        : spawn('./src/handler.rb', methodName, [JSON.stringify(event)]);
+        : spawn('./src/handler.rb', [methodName, JSON.stringify(event)]);
 
     let stdout = '';
     let stderr = '';
