@@ -7,6 +7,8 @@
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/aws" />
             <path value="file://$PROJECT_DIR$/aws/src" />
+            <path value="file://$PROJECT_DIR$/aws/api-gateway" />
+            <path value="file://$PROJECT_DIR$/aws/api-gateway/src" />
           </resourceRoots>
         </entryData>
       </entry>

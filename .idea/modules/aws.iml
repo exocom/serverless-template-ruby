@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
+  <component name="ModuleRunConfigurationManager">
+    <shared />
+  </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../../aws" />
+    <content url="file://$MODULE_DIR$/../../aws">
+      <excludeFolder url="file://$MODULE_DIR$/../../aws/vendor/bundle" />
+    </content>
     <orderEntry type="jdk" jdkName="ruby-2.3.3-p222" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="bson (v4.3.0, ruby-2.3.3-p222) [gem]" level="application" />

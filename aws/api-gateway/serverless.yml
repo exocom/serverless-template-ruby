@@ -1,0 +1,55 @@
+service:
+  name: "change-name"
+
+plugins:
+  - "@kalarrs/serverless-local-dev-server"
+  - "@kalarrs/serverless-shared-api-gateway"
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: ${file(../serverless.yml):provider.profile}
+  region: ${file(../serverless.yml):provider.region}
+  stage: ${file(../serverless.yml):provider.stage}
+  apiGatewayRestApiName: ${file(../serverless.yml):provider.apiGatewayRestApiName}
+
+  environment:
+    CHANGE_VALUE: ${env:CHANGE_VALUE, file(../serverless.yml):provider.environment.CHANGE_VALUE}
+
+
+functions:
+  # list
+  getChanges:
+    handler: src/handler.get_changes
+    events:
+      - http:
+          method: get
+          path: changes
+          cors: true
+  # create
+  postChanges:
+    handler: src/handler.post_changes
+    events:
+      - http:
+          method: post
+          path: changes
+          cors: true
+  # get
+  getChange:
+    handler: src/handler.get_change
+    events:
+      - http:
+          method: get
+          path: changes/{changeId}
+          cors: true
+  # delete
+  deleteChange:
+    handler: src/handler.delete_change
+    events:
+      - http:
+          method: delete
+          path: changes/{changeId}
+          cors: true
+custom:
+  user: ${file(../serverless.yml):custom.user}
+  localDevPort: 5000
